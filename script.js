@@ -31,15 +31,24 @@ function getTempEmoji(temp) {
     return "☀";                    // Hot
 }
 
-//Weather Condition Emojis
-function getConditionEmoji(condition) {
+//Weather Condition Emojis (Day/Night Support)
+function getConditionEmoji(condition, isNight = false) {
     condition = condition.toLowerCase();
-    if (condition.includes("cloud")) return "☁️";
-    if (condition.includes("rain")) return "🌧️";
-    if (condition.includes("thunder")) return "⛈️";
-    if (condition.includes("snow")) return "❄️";
-    if (condition.includes("clear")) return "☀️";
-    return "🌍"; // Default
+
+    if (isNight) {
+        if (condition.includes("clear")) return "🌙";
+        if (condition.includes("cloud")) return "☁️🌙";
+        if (condition.includes("rain")) return "🌧️🌙";
+        if (condition.includes("snow")) return "❄️🌙";
+        return "🌌"; // Default night
+    } else {
+        if (condition.includes("cloud")) return "☁️";
+        if (condition.includes("rain")) return "🌧️";
+        if (condition.includes("thunder")) return "⛈️";
+        if (condition.includes("snow")) return "❄️";
+        if (condition.includes("clear")) return "☀️";
+        return "🌍"; // Default day
+    }
 }
 
 //Humidity Emojis
@@ -82,12 +91,16 @@ async function getWeather(city) {
             return;
         }
 
+        // Check if it's night
+        let currentTime = Math.floor(Date.now() / 1000);
+        let isNight = currentTime < data.sys.sunrise || currentTime > data.sys.sunset;
+
         // Update boxes with emojis
         document.getElementById("temp").innerText =
             data.main.temp + " °C " + getTempEmoji(data.main.temp);
 
         document.getElementById("condition").innerText =
-            data.weather[0].description + " " + getConditionEmoji(data.weather[0].main);
+            data.weather[0].description + " " + getConditionEmoji(data.weather[0].main, isNight);
 
         document.getElementById("humidity").innerText =
             data.main.humidity + " % " + getHumidityEmoji(data.main.humidity);
@@ -125,12 +138,16 @@ async function getWeatherByCoords(lat, lon) {
         const response = await fetch(url);
         const data = await response.json();
 
+        // Check if it's night
+        let currentTime = Math.floor(Date.now() / 1000);
+        let isNight = currentTime < data.sys.sunrise || currentTime > data.sys.sunset;
+
         // Update boxes with emojis
         document.getElementById("temp").innerText =
             data.main.temp + " °C " + getTempEmoji(data.main.temp);
 
         document.getElementById("condition").innerText =
-            data.weather[0].description + " " + getConditionEmoji(data.weather[0].main);
+            data.weather[0].description + " " + getConditionEmoji(data.weather[0].main, isNight);
 
         document.getElementById("humidity").innerText =
             data.main.humidity + " % " + getHumidityEmoji(data.main.humidity);
