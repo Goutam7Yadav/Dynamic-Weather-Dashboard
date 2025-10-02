@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Page</title>
+    <link rel="stylesheet" href="weather.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body> 
+    <div class="header-box">
+        <span><b>Search page</b></span>
+        <nav>
+            <a  href="index.html">HOME</a>
+            <a  href="login.html">LOGIN</a>
+        </nav>
+        
+    </div>
+    <!--Main section-->
+        <div class="searchbox">
+            <form action="">
+                <label for="classA">
+                    <strong>Enter location</strong><br>
+                    <input type="text" placeholder="Search here" id="classA">
+                </label>
+                <br>
+                <button><b>Search</b></button>
+            </form>
+        </div>
+    <!--main section end-->    
+        <br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br>
+        <!--Weather conditions-->
+        <div class="container">
+            <b>Temperature 🌡️</b>
+            <div class="box"id="temp">- - -</div>
+            <b>Weather Condition ⛅</b>
+            <div class="box"id="condition">- - -</div>
+            <b>Humidity 💧</b>
+            <div class="box"id="humidity">- - -</div>
+            <b>Wind Speed 🌬️</b>
+            <div class="box"id="wind">- - -</div>
+            <b>Graph</b>
+            <div class="box" id="graphBox">
+            <canvas id="weatherChart"></canvas>
+            </div>
+        </div>
+        <!--end-->
+<script src="script.js"></script>
+</body>
+</html>

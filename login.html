@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Login Page</title>
+    <link rel="stylesheet" href="loginstyle.css">
+    <style>
+      header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px;
+      background-color: #96A78D;
+      box-shadow: 0px 6px 10px  rgba(0,0,0,0.4);
+      color: white;
+      display:flex;
+      justify-content: space-between;
+      align-items: center; 
+      z-index: 2;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+    header b{
+      font-size: 40px;
+    }
+    header a{
+      color: white;
+      margin-right: 40px;
+      margin-top:20px;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 15px;
+      background-color: #F0F0F0;
+      color: white;
+      text-align: center;
+      z-index: 2;
+    }
+    footer strong{
+      color:#96A78D;
+    }
+
+    /* Login Box */
+    .login-box {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(255,255,255,0.5);
+      box-shadow: 0px 6px 15px rgba(0,0,0,0.3);
+      padding: 50px 60px 50px 60px;
+      border-radius: 15px;
+      z-index:  2;
+      width: 300px;
+    }
+    #classA{
+      padding: 9px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border:none;
+      box-shadow:2px 5px 16px rgba(0, 0, 0, 0.25);
+    }
+    #classB{
+      margin-top: 10px;
+      margin-left: 5px;
+      background-color: #96A78D;
+      border:none;
+      padding:8px 15px;
+      cursor:pointer;
+      
+      box-shadow:2px 5px 16px rgba(0, 0, 0, 0.25);
+
+    }
+    #classB:hover{
+      transform: scale(1.1);
+      transition:.1s;
+      box-shadow:2px 5px 16px rgba(0, 0, 0, 0.1);
+    }
+    </style>
+</head>
+<body>
+
+    <header>
+    <b>Login Here</b> 
+    <a href="index.html">HOME</a>
+  </header>
+
+  <div class="login-box">
+    <h2>Login</h2>
+    <hr style="border: none; height: 2px; background-color: #96A78D; width: 100%;">
+      <b>Name</b><br>
+      <label for="classA">
+     <input type="text" placeholder="Username" id="classA"><br><br></label>
+     <b>Email-id</b><br>
+     <label for="classA">
+     <input type="email" placeholder="User Email-id" id="classA"><br><br></label>
+      <b>Password</b><br>
+      <label for="classA">
+     <input type="password" placeholder="Password" id="classA"><br><br></label>
+     <label for="classB">
+    <button class="submit" id="classB"><b>Login</b></button>
+    </label>
+  </div>
+
+  <footer>
+    <strong>👤 “Member Access Only”</strong>
+  </footer>
+
+    <div class="container">
+    <div class="circle"><div class="circle_1">
+    <div class="circle_2"><div class="circle_3">
+    <div class="circle_4"><div class="circle_5">
+    <div class="circle_6"><div class="circle_7">
+    <div class="circle_8"><div class="circle_9">
+    </div></div></div></div></div></div>
+    </div></div></div></div></div></div>
+
+</body>
+</html>

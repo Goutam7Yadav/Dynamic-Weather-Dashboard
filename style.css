@@ -1,0 +1,253 @@
+/*---body--- */
+body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color:#8D5F8C ;
+    }
+/* ----- Header box ----- */
+.headerbox {
+  display: flex;                  /* puts heading and button in one line */
+  justify-content: space-between; /* heading on left, button on right */
+  align-items: center;            /* vertical centering */
+  background: #6B3F69;
+  color: white;
+  padding: 10px 20px;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0px 6px 10px rgba(0,0,0,0.2);
+  position: relative;
+  z-index: 1;
+}
+
+.headerbox .title {
+  font-size: 40px;
+}
+
+/* ----- Content box ----- */
+.contentbox {
+      min-height: 400px;
+      background: rgba(255,255,255,0.15);
+      margin: 70px auto;
+      padding: 40px;
+      width: 80%;
+      border-radius: 12px;
+      box-shadow: 0px 6px 15px rgba(0,0,0,0.2);
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+
+/* ----- Footer box ----- */
+.footerbox {
+      background: #DDC3C3;
+      color: white;
+      overflow: hidden;
+      text-align: center;
+      padding: 30px;
+      box-shadow: 0px 6px 10px  rgba(0,0,0,0.2);
+      position: relative;
+      z-index: 1;
+      
+    }
+
+    /*Click button*/
+.header-btn{
+    background-color:#F39F9F;
+    color:black;
+    border-color: #B95E82;
+    border-style: solid;
+    padding:8px 16px;
+    border-radius:5px;
+    font-weight:bold;
+    border-width: 1px;
+    cursor:pointer;
+    transition: background-color 0.15s,
+    color 0.15s;
+    box-shadow:  0px 6px 10px  rgba(0,0,0,0.2);;
+    font-stretch: 20px;
+}
+.header-btn:hover{
+    background-color: #B95E82;
+    color:white
+}
+.header-btn:active{
+    opacity:0.5;
+}
+.contentbox p{
+    font-size: 24px;
+    font-family:'Times New Roman', Times, serif ;
+}
+.live-weather{
+
+    background-color: #D6A99D;
+    color: black;
+    border:none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 15px;
+    padding:12px 20px 12px 20px;
+    cursor:pointer;
+    transition: box-shadow 0.15s;
+}
+.live-weather:hover{
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.15);
+}
+
+
+/*----Animation----- */
+@keyframes rotate{
+                0%{transform: translateY(-50%) rotate(0deg);}
+                100%{transform: translateY(-50%) rotate(360deg);}
+            }
+@keyframes movebox {
+                0%{left: -100px;;}
+                100%{left:120%;}
+            }
+            .container{
+                position: fixed;
+                top:0;
+                left:0;
+                width:100%;
+                height: 100vh;
+                overflow: hidden;
+                z-index: -1;  /* send it behind all other content */
+            }
+            .box_110{
+                width:47px;  height: 47px;
+                position:absolute;  background-color: #f39f9fd3;
+                backdrop-filter: blur(8px);  border-radius:16px;  margin-top: 90px;
+                transform: translateY(-50%);animation: rotate 26s 0s infinite linear, movebox 70s 0s infinite linear;
+            }
+            .box_100{
+                width:38px;  height: 38px;
+                position:absolute;  background-color: #f39f9fd3;
+                backdrop-filter: blur(8px);  border-radius:12px; margin-top: 111px;
+                transform: translateY(-50%);animation: rotate 30s 0s infinite linear, movebox 50s 0s infinite linear;
+            }
+            .box_99{
+                width:91px;  height: 91px;
+                position:absolute;  background-color: #f39f9fd3;
+                backdrop-filter: blur(8px);  border-radius:20px;  margin-top:369px;
+                transform: translateY(-50%);animation: rotate 29s 0s infinite linear, movebox 70s 0s infinite linear;
+            }
+            .box_88{
+                width:18px;  height: 18px;
+                position:absolute;  background-color: #f39f9fd3;
+                backdrop-filter: blur(8px);   border-radius:5px; margin-top: 389px;
+                transform: translateY(-50%);animation: rotate 9s 0s infinite linear, movebox 15s 0s infinite linear;
+            }
+            .box_77{
+                width:55px;  height: 55px;
+                position:absolute;  background-color: #f39f9fd3;
+                backdrop-filter: blur(8px);  border-radius:15px; margin-top: 550px;
+                transform: translateY(-50%);animation: rotate 17s 0s infinite linear, movebox 20s 0s infinite linear;
+            }
+            .box_66{
+                width:30.66px;height: 30.66px;
+                position:absolute; background-color: #f39f9fd3;
+                backdrop-filter: blur(8px); border-radius:9px; margin-top: 437px;
+                transform: translateY(-50%);  animation: rotate 9s 0s infinite linear, movebox 7s 0s infinite linear;
+            }
+            .box_55{
+                width:90px;   height: 90px;
+                position:absolute; background-color: #f39f9fd3;
+                backdrop-filter: blur(8px);border-radius:25px; margin-top: 667px;
+                transform: translateY(-50%);  animation: rotate 19s 0s infinite linear, movebox 50s 0s infinite linear;
+            }
+            .box_44{
+                width:44px;  height: 44px;
+                position:absolute;  background-color: #f39f9fd3;
+                backdrop-filter: blur(8px); border-radius:10px; margin-top: 200px;
+                transform: translateY(-50%);animation: rotate 19s 0s infinite linear, movebox 60s 0s infinite linear;
+            }  
+            .box_33{
+                width:20px;  height: 20px;
+                position:absolute;  background-color: #f39f9fd3;
+                backdrop-filter: blur(8px); border-radius: 5px;  margin-top: 90px;
+                transform: translateY(-50%);animation: rotate 3s 0s infinite linear, movebox 15s 0s infinite linear;
+            }
+            .box_22{
+                width:26px;  height: 26px;
+                position:absolute;  background-color: #f39f9fd3;
+                backdrop-filter: blur(8px); border-radius: 7px;  margin-top:120px;
+                transform: translateY(-50%);animation: rotate 3s 0s infinite linear, movebox 26s 0s infinite linear;
+            }
+            .box_11{
+                width:20px;  height: 20px;
+                position:absolute;  background-color: #f39f9fd3;
+                backdrop-filter: blur(8px); border-radius: 5px; margin-top: 125px;
+                transform: translateY(-50%);animation: rotate 6s 0s infinite linear, movebox 7s 0s infinite linear;
+            }
+            .box{
+                width:25px;  height: 25px;
+                position:absolute;  background-color: #f39f9fd3;
+                backdrop-filter: blur(8px); border-radius: 6px; margin-top: 150px;
+                transform: translateY(-50%);animation: rotate 5s 0s infinite linear, movebox 10s 0s infinite linear;
+            }
+            .box_1{
+                width:50px;  height: 50px;
+                position:absolute;  background-color: #f39f9fd3;
+                backdrop-filter: blur(8px);border-radius: 10px; margin-top: 170px;
+                transform: translateY(-50%);animation: rotate 7s 0s infinite linear, movebox 40s 0s infinite linear;
+            }
+            .box_2{
+                width:70px;height: 70px;
+                position:absolute;background-color: #f39f9fd3;
+                backdrop-filter: blur(8px);border-radius: 15px;margin-top: 290px;
+                transform: translateY(-50%);animation: rotate 9s 0s infinite linear, movebox 13s 0s infinite linear;
+            }
+            .box_3{
+                width:40px;  height: 40px;
+                position:absolute;  background-color: #f39f9fd3;
+                backdrop-filter: blur(8px); border-radius: 8px; margin-top: 400px;
+                transform: translateY(-50%);animation: rotate 3s 0s infinite linear, movebox 28s 0s infinite linear;
+            }
+            .box_4{
+                width:45px;  height: 45px;
+                position:absolute;  background-color: #f39f9fd3;
+                backdrop-filter: blur(8px);  border-radius:9px; margin-top: 600px;
+                transform: translateY(-50%);animation: rotate 10s 0s infinite linear, movebox 37s 0s infinite linear;
+            }
+            .box_5{
+                width:80px;height: 80px;
+                position:absolute;background-color: #f39f9fd3;
+                backdrop-filter: blur(8px);border-radius:15px;margin-top: 700px;
+                transform: translateY(-50%);animation: rotate 19s 0s infinite linear, movebox 40s 0s infinite linear;
+            }
+            .box_6{
+                width:37px;height: 37px;
+                position:absolute;background-color: #f39f9fd3;
+                backdrop-filter: blur(8px);border-radius:12px;margin-top: 666px;
+                transform: translateY(-50%);animation: rotate 5s 0s infinite linear, movebox 6s 0s infinite linear;
+            }
+            .box_7{
+                width:65px;height: 65px;
+                position:absolute;background-color: #f39f9fd3;
+                backdrop-filter: blur(8px);border-radius:14px;margin-top: 705px;
+                transform: translateY(-50%);animation: rotate 6s 0s infinite linear, movebox 33s 0s infinite linear;
+            }
+            .box_8{
+                width:81px;height: 81px;
+                position:absolute;background-color: #f39f9fd3;
+                backdrop-filter: blur(8px);border-radius:16px;margin-top: 490px;
+                transform: translateY(-50%);animation: rotate 19s 0s infinite linear, movebox 80s 0s infinite linear;
+            }
+            .box_9{
+                width:100px;height: 100px;
+                position:absolute;background-color: #f39f9fd3;
+                backdrop-filter: blur(8px);border-radius:24px;margin-top: 207px;
+                transform: translateY(-50%);animation: rotate 23s 0s infinite linear, movebox 120s 0s infinite linear;
+            }
+            .box_10{
+                width:26px;height: 26px;position:absolute;
+                background-color: #f39f9fd3;backdrop-filter: blur(8px);
+                border-radius:6px;margin-top: 328px;
+                transform: translateY(-50%);animation: rotate 4s 0s infinite linear, movebox 9s 0s infinite linear;
+            }
+            .box_11{
+                width:30px;height: 30px;position:absolute;
+                background-color: #f39f9fd3;backdrop-filter: blur(8px);
+                border-radius:4px;margin-top: 632px;
+                transform: translateY(-50%);animation: rotate 7s 0s infinite linear, movebox 8s 0s infinite linear;
+            }

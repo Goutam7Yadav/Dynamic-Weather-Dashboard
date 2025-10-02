@@ -1,0 +1,135 @@
+    body {
+            margin: 0;
+            padding: 0;
+            height: 100vh; /* full height of viewport */
+            background-image: url("sunrise.png");
+            background-size: cover;     /* image covers whole page */
+            background-position: center; /* centers the image */
+            background-repeat: no-repeat; /* prevents repeat */
+            background-attachment: fixed; /* optional: makes image fixed when scrolling */
+        }
+        /*ca3dfa5dc6be02521750ce855f6a624d*/
+        .header-box{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: burlywood;
+            color:black;
+            padding:10px 20px;
+            font-size:24px;
+            box-shadow: 0px 6px 10px  rgba(0,0,0,0.4);
+            position: relative;
+            top:0;
+            left: 0;
+        }
+        .header-box b{
+            font-family:'Segoe UI', sans-serif ;
+            font-size: 50px;
+        }
+         .header-box nav a {
+            color: white;
+            margin-left: 15px;  /* spacing between links */
+            font-weight: bold;
+        }
+        /*Search box*/
+        .searchbox{
+            margin-top: 10px;
+            margin-bottom: 5px;
+            position:absolute;
+            top:150px;
+            background-color: rgba(255,255,255,0.5);
+            box-shadow: 0px 6px 15px rgba(0,0,0,0.3);
+            padding-top:50px;
+            padding-bottom: 50px;
+            padding-left:90px;
+            padding-right: 60px;
+            border-radius: 0px 130px 130px 0px;
+        } 
+        #classA{
+            padding-top:10px;
+            padding-bottom:10px;
+            padding-left: 80px;
+            padding-right: 80px;
+            border: none;
+            border-radius: 20px;
+            box-shadow:2px 5px 10px rgba(0, 0, 0, 0.3);
+            margin-top:10px;
+        }
+        .rightbox{
+            padding-top:80px;
+            padding-left:200px
+        }
+        .searchbox strong{
+            font-family: Arial;
+            font-size: 20px;
+            margin-left:5px;
+        }
+        .searchbox button{
+            margin-top:40px;
+            margin-left:100px;
+            padding:9px 15px;
+            border-radius: 50px;
+            border:none;
+            box-shadow:2px 5px 10px rgba(0, 0, 0, 0.3);
+            animation: colorchange 5s 0s infinite linear;
+        }
+        .searchbox button:hover{
+            transform: scale(1.12);
+            transition: .1s;
+        }
+        @keyframes colorchange {
+            0%{background-color: #96A78D;}
+            25%{background-color:#B6CEB4;}
+            50%{background-color:#D9E9CF;}
+            75%{background-color:#F0F0F0;}
+            100%{background-color:#edeaea;} 
+        }
+        /*Search box end*/
+
+        .container{
+            display: flex;
+            justify-content: space-around;
+            padding:30px
+        }
+        .box{
+            flex:1;
+            margin:10px;
+            padding:30px;
+            color:white;
+            font-size:18px;
+            text-align: center;
+            border-radius: 10px;
+            transition:all 0.4s ease;
+            background-color: rgba(0, 0, 0, 0.313);
+        }
+        
+        /*Tablet view*/
+            @media(max-width: 768px){
+                .container{
+                    flex-direction: column;
+                    align-items:center;
+                }
+            }
+            .box{
+                width:80%;
+                font-size: 20px;
+            }
+            /*Mobile view*/
+            @media(max-width: 480px){
+                body{
+                    background-color: #2d3436;
+                }
+                h2{
+                    background:#00b894;
+                    color:#dfe6e9;
+                }
+                .box{
+                    background-color: #636e72 !important;
+                    color: #dfe6e9;
+                    font-size: 16px;
+                    padding: 20px;
+                }
+            }
+#temp, #condition, #humidity, #wind {
+    font-size: 2rem;   /* makes the emoji bigger */
+}
